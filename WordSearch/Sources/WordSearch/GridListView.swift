@@ -8,13 +8,35 @@
 import SwiftUI
 
 struct GridListView: View {
+    @available(macOS 10.15, *)
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ForEach ()
     }
 }
 
 struct GridListView_Previews: PreviewProvider {
+    @available(macOS 10.15, *)
     static var previews: some View {
-        GridListView()
+        Group{
+            GridListView()
+            GridListView()
+                .previewInterfaceOrientation(.landscapeLeft)
+        }
     }
+}
+
+struct ViewModle{
+    let grid = [
+        ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"],
+        ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"],
+        ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"],
+        ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"],
+        ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"],
+        ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"],
+        ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"],
+        ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"],
+        ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"],
+        ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
+    ]
+    
 }
